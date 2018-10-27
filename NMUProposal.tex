@@ -1,0 +1,82 @@
+%% %% 版本作者:
+%% %%   Wizen Zhang
+%% %%   E-mail:wizen_zhang@163.com
+%% %%   GitHub:https://github.com/WizenZhang/NMUProposal
+%% %%=================================================================
+%% %% <UTF-8>
+%% %% 北方民族大学硕士学位论文开题报告书LaTeX模板--始于 2018/10/27
+%% %% 请将以下文件与此LaTeX文件放在同一目录中.
+%% %%-----------
+%% %% NMUProposal.tex         : LaTeX模板运行入口(main)
+%% %% NMUProposal.pdf         : PDF模板样例
+%% %% nmu.cls                 : LaTeX宏模板文件
+%% %% GBT7714-2005.bst        : 国标参考文献BibTeX样式文件2005(https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
+%% %% GBT7714-2015.bst        : 国标参考文献BibTeX样式文件2015(https://github.com/zepinglee/gbt7714-bibtex-style)
+%% %% tex/*.tex               : LaTeX模板样例中的独立章节
+%% %% figures/*               : LaTeX模板样例中的插图存放目录
+%% %% ref.bib                 : LaTeX模板中的参考文献Bib文件
+%% %% make.bat                : 生成NMUProposal.pdf
+%% %% clean.bat               : 清理冗余文件
+%% %%-----------
+%% %% 请统一使用UTF-8编码.
+%% %%=================================================================
+%% %%LaTeX安装配置教程请参看：https://jingyan.baidu.com/article/b2c186c83c9b40c46ff6ff4f.html
+%%LaTeX入门视频教程请参看：https://blog.csdn.net/so_geili/article/details/51702564
+%=================================================================
+\documentclass{nmu}% thesis template of UCAS
+\usepackage{titlesec}   %设置页眉页脚的宏包
+%=================================================================
+% 插图路径设置，图片放在figures 文件夹下。一般来说论文的插图比较多，通常按章节存
+% 放，因此可以在以下命令中在按章节添加存放图片的文件夹路径。如以下这个路径中 ./
+% 代表当前NMUProposal.tex所在的目录，就是一般所说的当前文件夹；figures 文件夹就是子文件
+% 夹，存放正文及附录中要用到的所有的图片，在figures 文件夹中的子文件夹就是存放各
+% 个章节图片的文件夹，一般命名与相应章节的名字相同，如section_sample章节用到的图片全放在
+% 了sample这个子文件夹下。
+\graphicspath{{./figures/sample/},{./figures/}}
+\bibliographystyle{GBT7714-2015}
+%%=================================================================
+\author{学生姓名}                                 % 报告人
+
+\major{计算机系统结构}                             % 专业
+
+\field{开题报告\LaTeX{}编程研究}                   % 研究方向
+
+% 导师 (专硕增加企业导师），第一参数为校内导师内容，第二个参数为企业导师内容
+% 若无增加企业导师，需删除nmu.cls中 "& \NMUunderline[256pt]{\NMU@value@secadvisor} \\" 对应的一行	
+\advisor{校内导师~~教授}{企业导师~~高级工程师}      
+
+% 论文标题, 因title一般都很长需要两行，第一参数为第一行内容，第二个参数为第二行内容
+% 若论文标题只有一行，需删除nmu.cls中 "& \NMUunderline[256pt]{\NMU@value@sectitle} \\" 对应的一行
+\nmutitle{北方民族大学硕士学位论文}{开题报告书\LaTeX{} 模板}
+
+\institute{计算机科学与工程学院}                   % 学院
+
+\chinesedate{2018~年~10~月~24日}                  % 开题日期
+
+\begin{document}
+% 封皮
+\maketitle
+%%=================================================================
+%% 添加正文内容
+\pagenumbering{arabic}  %restart page numbers with arabic style
+
+% 1．本课题的研究目的与意义
+% 2．与选题相关的国内外研究状况及最新动态
+% 3．本课题的基本内容
+% 4．本课题的重点和难点
+% 5．本课题实验设计及创新之处
+% 6．可行性论证
+% 7．论文提纲
+% 8．调研进度安排
+% 9．预期目标
+% 10．与本课题相关的主要参考文献
+\input{tex/section1-10.tex}
+
+% 指导教师意见
+\input{tex/tutor_opinion.tex}
+
+% 北方民族大学研究生学位论文开题报告评议书
+\input{tex/proposal_appraisal.tex}
+
+\end{document}
+%%=================================================================
