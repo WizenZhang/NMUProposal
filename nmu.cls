@@ -191,11 +191,11 @@
 %%%%********************** Labels in Chinese Titlepage *******************************
 %%
 \def\NMU@label@author{\bfseries 报~~告~~人：}
-\def\NMU@label@major{\bfseries 专 \qquad 业：}
+\def\NMU@label@major{\bfseries 专~~~~~~~~业：}
 \def\NMU@label@field{\bfseries 研究方向：}
-\def\NMU@label@advisor{\bfseries 导 \qquad 师：}
+\def\NMU@label@advisor{\bfseries 导~~~~~~~~师：}
 \def\NMU@label@title{\bfseries 论文题目：}
-\def\NMU@label@institute{\bfseries 系 \qquad 所：}
+\def\NMU@label@institute{\bfseries 系~~~~~~~~所：}
 \def\NMU@label@date{\bfseries 填表时间：}
 %%%%% --------------------------------------------------------------------------------
 %%
