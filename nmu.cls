@@ -7,6 +7,7 @@
 %% 模板标识
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{num}[2018/10/26 v1.0 NMUproposal document class]
+\typeout{This is LaTeX template num, Version 1.0 (based on CTex) 2018/10/26, by Wizen Zhang}
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%*************************** Declare Options **************************************
@@ -31,7 +32,6 @@
 \else% if double-sided printing isn't enabled
 \LoadClass[UTF8,a4paper,oneside,fntef,12pt]{ctexart}
 \fi
-%%%%% --------------------------------------------------------------------------------
 %%
 %%%%***************************** Package Infomation *********************************
 %%
@@ -41,16 +41,15 @@
 \RequirePackage{amsmath,amssymb,amstext}
 \RequirePackage[includeheadfoot]{geometry}
 \RequirePackage{setspace}     % 设置行间距
-\usepackage{graphicx}
-\usepackage{zref-abspage,zref-savepos}
-\usepackage{atbegshi}
-\usepackage{tikz}
-\usepackage{fancyhdr} % 页眉页脚
-\usepackage{multirow} % 单元格合并
-\usepackage[colorlinks,linkcolor=black,anchorcolor=black,citecolor=black]{hyperref}% 超连接
+\RequirePackage{graphicx}
+\RequirePackage{zref-abspage,zref-savepos}
+\RequirePackage{atbegshi}
+\RequirePackage{tikz}
+\RequirePackage{fancyhdr} % 页眉页脚
+\RequirePackage{multirow} % 单元格合并
+\RequirePackage[colorlinks,linkcolor=black,anchorcolor=black,citecolor=black]{hyperref}% 超连接
 \RequirePackage[sort&compress]{natbib}   % BibTex
-\usepackage{fontawesome}     %可缩放的矢量图标
-\usepackage{pifont}          %小铅笔符号
+\RequirePackage{pifont}          %小铅笔符号
 \RequirePackage{subcaption}   % 并排图形。subfigure、subfig与subcaption不兼容
 \RequirePackage{algorithmic}  % 算法环境
 \RequirePackage{algorithm2e}  % 算法环境
@@ -64,9 +63,9 @@
 \RequirePackage{multirow}     % 多行表格
 
 %%%时间线相关宏包
-\usepackage[utf8]{inputenc}
-\usepackage[TS1,T1]{fontenc}
-\usepackage{caption}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[TS1,T1]{fontenc}
+\RequirePackage{caption}
 \newcommand{\foo}{\color{black}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
 
 \usepackage{enumitem}
@@ -369,13 +368,13 @@
 	\thispagestyle{empty}
 	\vspace*{0pt}
 	\begin{center}      
-	\includegraphics[scale=1.0]{proposal.pdf}
+	\hspace{-1em}\includegraphics[scale=1.0]{proposal.pdf}
 	
 	\vspace*{160pt}
 	
 	\def\tabcolsep{1pt}
 	\def\arraystretch{1.2}
-	{\zihao{3}\songti \hspace{3em}
+	{\zihao{3}\songti \hspace{1em}
 		\begin{tabular}{lp{10cm}}				
 			{\NMU@label@author}    & \NMUunderline[256pt]{\NMU@value@author} \\			
 			{\NMU@label@major}     & \NMUunderline[256pt]{\NMU@value@major} \\		
@@ -421,6 +420,15 @@
 	\chead{\bfseries \zihao{-2} \songti 毕~~业~~论~~文~~开~~题~~报~~告 } % center header
 	\rhead{} % empty right header
 	\cfoot{\footnotesize\thepage}
+}
+%%%%% --------------------------------------------------------------------------------
+% 设置PDF标识
+\hypersetup{%
+	pdftitle={北方民族大学硕士学位论文开题报告书LaTeX模板},
+	pdfkeywords={NMUProposal},
+	pdfauthor={Wizen Zhang},
+	pdfsubject={https://github.com/WizenZhang/NMUproposal},
+	pdfcreator={LaTeXed~By~Wizen Zhang(https://github.com/WizenZhang/NMUproposal)}
 }
 %%%%% --------------------------------------------------------------------------------
 \endinput
